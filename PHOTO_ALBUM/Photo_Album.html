@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Album</title>
+</head>
+<body>
+    <div class="header">
+        <div><h1>Album</h1></div>
+        <div><i class="fa-solid fa-filter" id="filter"></i></div>
+        <div id="filtermenu">
+            <input type="checkbox" id="greyscale" class="option"> greyscale <br>
+            <input type="checkbox" id="Reddish" class="option"> Reddish <br>
+            <input type="checkbox" id="Greenish" class="option"> Greenish <br>
+            <input type="checkbox" id="Bluish"class="option"> Bluish
+        </div>
+        
+    </div>
+
+
+    <div id="contextMenu">
+        <div id="it1" class="item">Open in Newtab</div><hr>
+        <div id="it3" class="item">Increase brightness</div>
+        <div id="it4" class="item">Reduce resolution</div><hr>
+        <div id="it5" class="item">Create avatar</div>
+        <div id="it6" class="item">Duplicate image</div> 
+        <!-- <div id="it7" class="item">Create thumbnail</div> -->
+        <div id="it8" class="item">Generate QRCode</div><hr>
+        <div id="it2" class="item">Convert to Greyscale
+        </div>
+        <div id="it9" class="item">Convert to Reddish</div>
+        <div id="it10" class="item">Convert to Greenish</div>
+        <div id="it11" class="item">Convert to Bluish</div><hr>
+        <div id="it12" class="item">Check image color</div>        
+        <div id="it13" class="item">Download image</div>        
+
+    </div>
+    <form class="inputCaption" style="visibility: hidden;">
+        <input type="text" for="caption" id="input">
+        <button type="submit" id="submitCaption"></button>
+    </form>
+    <div id="container" class="container">
+        <div id="1d"><img src="https://shutterflywpe.wpenginepowered.com/wp-content/uploads/2018/11/Pet-Photo-Albums-Meet-Our-Pet.jpg" crossorigin="anonymous" alt="" id="1">
+        <!-- <div id="color">
+            color
+        </div> -->
+        </div>
+        <div id="2d"><img src="https://shutterflywpe.wpenginepowered.com/wp-content/uploads/2018/11/Pet-Photo-Albums-Funny-Rabbit-Quotes.jpg" crossorigin="anonymous" alt="" id="2"></div>
+        <div id="3d"><img src="https://shutterflywpe.wpenginepowered.com/wp-content/uploads/2018/11/Pet-Photo-Albums-Quirky-Cat-Book.jpg" crossorigin="anonymous" alt="" id="3"></div>
+        <div id="4d"><img src="https://shutterflywpe.wpenginepowered.com/wp-content/uploads/2018/11/Pet-Photo-Albums-Dog-Costumes-Book.jpg" crossorigin="anonymous" alt="" id="4"></div>
+        <div id="5d"><img src="https://www.blurb.com/blog/wp-content/uploads/2019/12/20191125_DecBlog_1000x586_v1-PetAlbum_10.jpg" crossorigin="anonymous" alt="" id="5"></div>
+        <div id="6d"><img src="https://www.blurb.com/blog/wp-content/uploads/2019/12/20191125_DecBlog_1000x586_v1-PetAlbum_03.jpg" crossorigin="anonymous" alt="" id="6"></div>
+        <div id="7d"><img src="https://www.blurb.com/blog/wp-content/uploads/2019/12/20191125_DecBlog_1000x586_v1-PetAlbum_05.jpg" crossorigin="anonymous" alt="" id="7"></div>
+        <div id="8d"><img src="https://www.blurb.com/blog/wp-content/uploads/2019/12/20191125_DecBlog_1000x586_v1-PetAlbum_08.jpg" alt="" id="8"></div>
+        <div id="9d"><img src="https://www.warrenphotographic.co.uk/photography/cats/17861.jpg" alt="" id="9"></div>
+        <div id="10d"><img src="https://www.warrenphotographic.co.uk/photography/cats/33135.jpg" alt="" id="10"></div>
+        <div id="11d"><img src="https://www.warrenphotographic.co.uk/photography/cats/38072.jpg" alt="" id="11"></div>
+        <div id="12d"><img src="https://www.warrenphotographic.co.uk/photography/cats/13621.jpg" alt="" id="12"></div>
+        <div id="13d"><img src="https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730__340.jpg" alt="" id="13"></div>
+        <div id="14d"><img src="https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__340.jpg" alt="" id="14"></div>
+        <div id="15d"><img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720__340.jpg" alt="" id="15"></div>
+        <div id="16d"><img src="https://cdn.pixabay.com/photo/2016/11/26/23/45/dog-1861839__340.jpg" crossorigin="anonymous" alt="" id="16"></div>
+    </div> 
+    
+    <canvas  id="3"id="qrcode"></canvas>
+    <footer>
+            <script src="script.js"></script>
+            <script src="https://kit.fontawesome.com/2c968d0755.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+            <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    </footer>
+</body>
+</html>
